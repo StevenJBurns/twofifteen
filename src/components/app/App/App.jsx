@@ -1,58 +1,59 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { PageHome } from "components/pages/Home/PageHome";
+import { SeasonsList } from '../../pages/SeasonsList/SeasonList';
+import { SeasonsDetail } from '../../pages/SeasonsDetail/SeasonsDetail';
+import { PageVenues } from "../../pages/VenuesList/PageVenueList";
+import { PageFranchiseList, PageFranchiseDetail } from "../../pages/FranchisesList";
+import { PeopleList } from "components/pages/PeopleList/PeopleList";
+import { PeopleDetail } from "components/pages/PeopleDetail/PeopleDetail";
+import { PageGamesList } from "../../pages/GamesList/PageGamesList";
+import { AchievementsList } from "components/pages/AchievementsList/AchievementsList";
+import { LocationsList } from 'components/pages/LocationsList/LocationsList';
+import { Page404 } from 'components/pages/Page404/Page404';
 
-// import AppHeader from "../AppHeader/AppHeader";
-// import AppNav from "../AppNav/AppNav";
-// import AppFooter from '../AppFooter/AppFooter';
-
-import { PageHome } from "../../pages/PageHome/PageHome";
-/* Season list and details pages*/
-import { PageSeasonList } from '../../pages/PageSeasonList/PageSeasonList';
-import { PageSeasonDetail } from '../../pages/PageSeasonDetail/PageSeasonDetail';
-// import { SeasonSelect } from '../../ui/SeasonsSelect/SeasonsSelect';
-import PageVenues from "../../pages/PageVenues/PageVenueList";
-import { PageFranchiseList, PageFranchiseDetail } from "../../pages/PageFranchises";
-import PagePlayers from "../../pages/PagePlayers/PagePlayers";
-// import PagePlayer from "../../pages/PagePlayer";
-import { PageGamesList } from "../../pages/PageGames/PageGamesList";
-import PageAchievements from "../../pages/PageAchievements/PageAchievements";
-
-/* Stylesheets */
-import './App.scss';
-import './App-1.css';
-import './App-2.css';
-
-export const App = () => (
-  <Switch>
-    <Route path="/" exact>
-      <PageHome />
-    </Route>
-    <Route path="/seasons" exact>
-      <PageSeasonList />
-    </Route>
-    <Route path="/seasons/:season">
-      <PageSeasonDetail />
-    </Route>
-    <Route path="/venues">
-      <PageVenues />
-    </Route>
-    <Route exact path="/franchises">
-      <PageFranchiseList />
-    </Route>
-    <Route path="/franchises/:id">
-      <PageFranchiseDetail />
-    </Route>
-    <Route path="/people" exact>
-      <PagePlayers />
-    </Route>
-    {/* <Route path="/player" exact component={ PagePlayer }/> */}
-    <Route path="/games">
-      <PageGamesList />
-    </Route>
-    <Route path="/achievements">
-      <PageAchievements />
-    </Route>
-  </Switch>
-);
-
-export default App;
+export const App = () => {
+  return (
+    <Switch>
+      <Route exact path="/">
+        <PageHome />
+      </Route>
+      <Route exact path="/seasons">
+        <SeasonsList />
+      </Route>
+      <Route exact path="/seasons/:year">
+        <SeasonsDetail />
+      </Route>
+      <Route exact path="/venues">
+        <PageVenues />
+      </Route>
+      <Route exact path="/franchises">
+        <PageFranchiseList />
+      </Route>
+      <Route exact path="/franchises/:id">
+        <PageFranchiseDetail />
+      </Route>
+      <Route exact path="/people">
+        <PeopleList />
+      </Route>
+      <Route exact path="/people/:id">
+        <PeopleDetail />
+      </Route>
+      <Route exact path="/games">
+        <PageGamesList />
+      </Route>
+      <Route exact path="/achievements">
+        <AchievementsList />
+      </Route>
+      <Route exact path="/games">
+        <PageGamesList />
+      </Route>
+      <Route exact path="/locations">
+        <LocationsList />
+      </Route>
+      <Route>
+        <Page404 />
+      </Route>
+    </Switch>
+  );
+};
