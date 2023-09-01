@@ -1,11 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD:src/components/pages/PageVenues/PageVenueList.jsx
-=======
 import { useDispatch, useSelector } from 'react-redux';
 import { Box, CircularProgress } from '@material-ui/core';
 import { getAllVenuesThunk } from 'state/actions/venues/getAllvenues';
 import { selectVenuesStatus, selectAllVenues } from 'state/selectors/selectVenues';
->>>>>>> 14d8bec95847d45ed37c92dd7284e23964d5f17b:src/components/pages/VenuesList/PageVenueList.jsx
 import { Page } from '../Page/Page';
 
 // import Background from '../images/ballparks.jpg';
@@ -40,7 +37,6 @@ import { Page } from '../Page/Page';
 // import Bronx from '../images/bronx.jpg';
 
 export const PageVenues = () => {
-<<<<<<< HEAD:src/components/pages/PageVenues/PageVenueList.jsx
   const api_url = "http://twofifteen-api.azurewebsites.net/venue";
 
   React.useEffect(() => {    
@@ -56,21 +52,6 @@ export const PageVenues = () => {
   return (
     <Page className="page-ballparks">
       <div className="div-venues-content"></div>
-=======
-  const dispatch = useDispatch();
-  const venues = useSelector(selectAllVenues);
-  const venuesStatus = useSelector(selectVenuesStatus);
-
-  React.useEffect(() => {
-    if (!venues.length) dispatch(getAllVenuesThunk());
-  }, [dispatch, venues]);
-
-  if (venuesStatus) return (
-    <Page>
-      <Box flexGrow="1" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-        <CircularProgress size={128} />
-      </Box>
->>>>>>> 14d8bec95847d45ed37c92dd7284e23964d5f17b:src/components/pages/VenuesList/PageVenueList.jsx
     </Page>
   );
 
