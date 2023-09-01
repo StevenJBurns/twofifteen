@@ -54,12 +54,4 @@ export const PageVenues = () => {
       <div className="div-venues-content"></div>
     </Page>
   );
-
-  return (
-    <Page>
-      <ul>
-        { venues.map(venue => (<li key={venue.id}>{venue.name}</li>)) }
-      </ul>
-    </Page>
-  );
 };

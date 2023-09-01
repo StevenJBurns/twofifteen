@@ -1,7 +1,7 @@
 import React from 'react';
 import MomentUtils from '@date-io/moment';
 import { DatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-import Page from '../Page/Page';
+import { Page } from '../Page/Page';
 
 export const PageGamesList = () => {
   const [selectedDate, setSelectedDate] = React.useState(new Date());
