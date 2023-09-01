@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Page } from '../Page/Page';
 
 // import Background from '../images/ballparks.jpg';
@@ -34,13 +33,11 @@ import { Page } from '../Page/Page';
 // import Bronx from '../images/bronx.jpg';
 
 export const PageVenues = () => {
-  const [venues, setVenues] = React.useState([]);
-
   const api_url = "http://twofifteen-api.azurewebsites.net/venue";
 
   React.useEffect(() => {    
     const getVenues = async () => {
-      fetch(api_url) //{ mode : "cors" }
+      fetch(api_url)
       .then(res => res.json())
       .then(json => this.setState({ venues : json }))
       .catch(err => console.error(err));

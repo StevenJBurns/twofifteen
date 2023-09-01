@@ -57,7 +57,7 @@ export const FranchisdeSeasonChart = ({data}) => {
       .attr("stroke-width", 1)
       .attr("stroke", "lightgreen")
     }
-  }, [data, container.current]);
+  }, [data]);
 
 
   return (

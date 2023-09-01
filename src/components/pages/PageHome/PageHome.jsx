@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { AppNav } from '../../app/AppNav/AppNav';
 import './PageHome.scss';
 
 export const PageHome = props => {
-  const [] = React.useState();
-
   return (
     <main id="page-home">
       <div id="page-home__div-upper" />

@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { makesStyles, makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 import { PageHeader } from './PageHeader';
 import { PageFooter } from './PageFooter';
 import { PageNav } from './PageNav';
