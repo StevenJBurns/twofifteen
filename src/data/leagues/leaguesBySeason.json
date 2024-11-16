@@ -1,6 +1,6 @@
 [
-  { "leadueId": "NL", "seasonId": 2019 },
-  { "leadueId": "AL", "seasonId": 2019 },
-  { "leadueId": "NL", "seasonId": 2018 },
-  { "leadueId": "AL", "seasonId": 2018 }
+  { "leagueId": "NL", "seasonId": 2019 },
+  { "leagueId": "AL", "seasonId": 2019 },
+  { "leagueId": "NL", "seasonId": 2018 },
+  { "leagueId": "AL", "seasonId": 2018 }
 ]
