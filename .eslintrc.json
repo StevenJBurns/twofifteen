@@ -13,7 +13,7 @@
     "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -21,7 +21,9 @@
   },
   "rules": {
     "import/first": "off",
-    "import/new-line-after-import": "off"
+    "eslint-plugin-import/order": "off",
+    "import/new-line-after-import": "off",
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "import/resolver": {
